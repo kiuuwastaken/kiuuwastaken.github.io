@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <nav class="sidebar" id="sidebar">
+        <!-- Close button inside the sidebar -->
+        <button class="toggle-btn close-btn" id="close-btn">&#10006;</button>
+
+        <!-- Translation buttons at the top-left corner -->
+        <div class="language-switch">
+            <button class="toggle-btn translation-btn" id="en-btn" onclick="setLanguage('en')">EN</button>
+            <button class="toggle-btn translation-btn" id="pl-btn" onclick="setLanguage('pl')">PL</button>
+        </div>
+
+        <!-- Rest of the sidebar content -->
+        <h2>Menu</h2>
+        <ul>
+            <li class="now"><a href="index.html">CV</a></li>
+            <li><a id="sidebar-projects" href="projects.html">Projekty</a></li>
+            <li class="in_progress"><a>In progress...</a></li>
+        </ul>
+    </nav>
+
+    <!-- Button to show the sidebar -->
+    <button class="toggle-btn open-btn" id="open-btn">&#9776;</button>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <header>
+            <div id="cv" class="container">
+                <h1>Tomasz Sykuła</h1>
+            </div>
+        </header>
+
+        <main>
+            <div class="container">
+                <!-- About Section -->
+                <section id="about">
+                    <h2>O mnie</h2>
+                    <p>Jestem zaangażowanym uczniem liceum, w którym dumnie pełnie rolę szefa sekcji technicznej i pomagam w
+                        przygotowaniach do festiwali. Interesuję się informatyką, szczególnie programowaniem i cyberbezpieczeństwem,
+                        ale również technologią. Poza informatyką pasjonuję się koszykówką, debatami, żeglarstwem i dobrymi filmami.
+                    </p>
+                </section>
+
+                <!-- Experience Section -->
+                <section id="experience">
+                    <h2>Doświadczenie</h2>
+                    <div class="job">
+                        <h3>Redaktor Techniczny</h3>
+                        <h4>WSiP | 2024 (Lipiec, Sierpień)</h4>
+                        <p>Prace porządkowe serwisu eduranga.pl. Wykorzystane: WordPress, HTML, CSS, JavaScript.</p>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section id="skills">
+                    <h2>Umiejętności</h2>
+                    <ul>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Python, SQL</li>
+                        <li>C++</li>
+                        <li>WordPress</li>
+                    </ul>
+                </section>
+
+                <!-- Education Section -->
+                <section id="education">
+                    <h2>Edukacja</h2>
+                    <h3>Wykształcenie średnie</h3>
+                    <h4>XXVIII Liceum Ogólnokształcące w Warszawie im. Jana Kochanowskiego</h4>
+                    <p>2022 - 2026</p>
+                </section>
+            </div>
+
+            <!-- Contact Section -->
+            <footer>
+                <div class="container">
+                    <section id="contact">
+                        <h2>Kontakt</h2>
+                        <p>Email: elon.musk@spacex.com</p>
+                        <p>Phone: (123) 456-7890</p>
+                        <p>LinkedIn: linkedin.com/in/elonmusk</p>
+                    </section>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+    <script src="shared.js"></script>
+</body>
+</html>

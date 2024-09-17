@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="projects.css">
+</head>
+<body>
+    <!-- Sidebar Menu -->
+    <nav class="sidebar" id="sidebar">
+        <!-- Close button inside the sidebar -->
+        <button class="toggle-btn close-btn" id="close-btn">&#10006;</button>
+
+        <!-- Translation buttons at the top-left corner -->
+        <div class="language-switch">
+            <button class="toggle-btn translation-btn" id="en-btn" onclick="setLanguage('en')">EN</button>
+            <button class="toggle-btn translation-btn" id="pl-btn" onclick="setLanguage('pl')">PL</button>
+        </div>
+
+        <!-- Rest of the sidebar content -->
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="index.html">CV</a></li>
+            <li class="now"><a id="sidebar-projects" href="projects.html">Projekty</a></li>
+            <li class="in_progress"><a>In progress...</a></li>
+        </ul>
+    </nav>
+
+    <!-- Button to show the sidebar -->
+    <button class="toggle-btn open-btn" id="open-btn">&#9776;</button>
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <header>
+            <h1>My Projects</h1>
+        </header>
+        <main>
+            <div class="grid-container">
+                <!-- Project 1 -->
+                <div class="project-box" onclick="openModal(1)">
+                    <div class="project-photo">
+                        <img src="project1.jpg" alt="Project 1 Photo">
+                    </div>
+                    <div class="project-details">
+                        <h2>Project Title 1</h2>
+                        <p class="project-date">January 2024</p>
+                        <p class="project-description">
+                            This is a short description of the project that will be truncated for display...
+                        </p>
+                        <span class="more-link" onclick="openModal(1)">more...</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-box" onclick="openModal(2)">
+                    <div class="project-photo">
+                        <img src="project2.jpg" alt="Project 2 Photo">
+                    </div>
+                    <div class="project-details">
+                        <h2>Project Title 2</h2>
+                        <p class="project-date">February 2024</p>
+                        <p class="project-description">
+                            This is another short description of a project that will be truncated for display...
+                        </p>
+                        <span class="more-link" onclick="openModal(2)">more...</span>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-box" onclick="openModal(3)">
+                    <div class="project-photo">
+                        <img src="project3.jpg" alt="Project 3 Photo">
+                    </div>
+                    <div class="project-details">
+                        <h2>Project Title 3</h2>
+                        <p class="project-date">March 2024</p>
+                        <p class="project-description">
+                            This is another short description of a project that will be truncated for display...
+                        </p>
+                        <span class="more-link" onclick="openModal(3)">more...</span>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-box" onclick="openModal(4)">
+                    <div class="project-photo">
+                        <img src="project4.jpg" alt="Project 4 Photo">
+                    </div>
+                    <div class="project-details">
+                        <h2>Project Title 4</h2>
+                        <p class="project-date">April 2024</p>
+                        <p class="project-description">
+                            This is another short description of a project that will be truncated for display...
+                        </p>
+                        <span class="more-link" onclick="openModal(4)">more...</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Contact Section -->
+            <footer>
+                <div class="container">
+                    <section id="contact">
+                        <h2>Kontakt</h2>
+                        <p>Email: elon.musk@spacex.com</p>
+                        <p>Phone: (123) 456-7890</p>
+                        <p>LinkedIn: linkedin.com/in/elonmusk</p>
+                    </section>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Modal for displaying extended project details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-details"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript file -->
+    <script src="projects.js"></script>
+    <script src="shared.js"></script>
+</body>
+</html>

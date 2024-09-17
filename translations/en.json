@@ -1,0 +1,19 @@
+{
+    "pageTitle": "Tomasz Sykuła",
+    "sidebarProjects": "Projects",
+    "aboutTitle": "About Me",
+    "aboutContent": "I am a committed high school student proudly serving as the head of the technical section, helping with preparations for festivals. I am interested in computer science, particularly programming and cybersecurity, but also in technology. Outside of computer science, I am passionate about basketball, debates, sailing, and good movies.",
+    "experienceTitle": "Experience",
+    "experiencePosition": "Technical Editor",
+    "experienceCompany": "WSiP | 2024 (July, August)",
+    "experienceDescription": "Maintenance work on the eduranga.pl service. Technologies used: WordPress, HTML, CSS, JavaScript.",
+    "skillsTitle": "Skills",
+    "educationTitle": "Education",
+    "educationSectionTitle": "Secondary Education",
+    "educationSchool": "XXVIII High School in Warsaw named after Jan Kochanowski",
+    "educationDates": "2022 - 2026",
+    "contactTitle": "Contact",
+    "contactEmail": "Email: elon.musk@spacex.com",
+    "contactPhone": "Phone: (123) 456-7890",
+    "contactLinkedIn": "LinkedIn: linkedin.com/in/elonmusk"
+}

@@ -1,0 +1,299 @@
+/*---------------------- specific for page ----------------*/
+
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#about p {
+    color: #ffffff;
+    font-size: 1.2em;
+}
+
+.job {
+    margin-bottom: 30px;
+}
+
+.main-content.full-width {
+    margin-left: 0; /* Expand content when sidebar is hidden */
+}
+
+.open-btn.show {
+    display: block; /* Show open button when sidebar is hidden */
+}
+
+/*----------------------  Base -------------------------*/
+
+body {
+    font-family: Arial, sans-serif;
+    color: #f0f0f0;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Sidebar Menu */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #222;
+    position: fixed;
+    padding: 10px 20px;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+/* Sidebar when hidden */
+.sidebar.hidden {
+    transform: translateX(-100%); /* Slide out the sidebar fully */
+}
+
+/* Close button */
+.close-btn {
+    background-color: cyan;
+    color: #333;
+    border: none;
+    margin-left: 80%;
+    width: 20%;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 20px; /* Add spacing below the close button */
+}
+
+/* Language switch container */
+.language-switch {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+/* Translation buttons */
+.translation-btn {
+    background-color: #444;
+    color: #f0f0f0;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 45%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.translation-btn:hover {
+    color: cyan;
+}
+
+.translation-btn.toggled {
+    background-color: cyan;
+    color: #333;
+}
+
+/* Sidebar content */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-size: 1.2em;
+    padding-left: 10px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    color: cyan;
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: cyan;
+    margin-bottom: 20px;
+}
+
+.now{
+    background-color:rgb(0, 255, 255)!important;
+}
+.now a{
+    color: #000000!important;
+}
+/* Open button for sidebar */
+.open-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    background-color: cyan;
+    color: #333;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 220px;
+    transition: margin-left 0.3s ease;
+}
+
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #222;
+    border-bottom: 5px solid cyan;
+}
+
+h1 {
+    font-size: 3em; /* Use the same font size as the home page */
+    color: cyan; /* Same color as the home page */
+    margin: 0;
+    text-transform: uppercase; /* Apply uppercase if it's used on the home page */
+    letter-spacing: 1px; /* Add letter spacing if necessary */
+    font-weight: bold; /* Ensure the font weight matches */
+}
+
+h2 {
+    font-size: 2em;
+    color: cyan;
+    border-bottom: 2px solid cyan;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #f0f0f0;
+    font-size: 1.5em;
+}
+
+h4 {
+    font-size: 1.2em;
+    color: #ccc;
+}
+
+p {
+    color: #bbb;
+    font-size: 1em;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #444;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-left: 5px solid cyan;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #222;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    color: #aaa;
+}
+
+.in_progress a{
+    color: #222!important;
+}
+/*---------------------- end of base ----------------------*/
+
+/*--------------------- Responsive Design -----------------*/
+
+/* Adjust Sidebar and Content for Small Screens */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+    /* Sidebar Full-Screen on Mobile */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1001; /* Ensure it's above content */
+        transform: translateX(-100%);
+    }
+
+    .sidebar ul li {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .sidebar.active{
+        transform: translateX(0);
+        width:90.5%;
+    }
+
+    /* When sidebar is hidden */
+    .sidebar.hidden {
+        transform: translateX(-100%);
+    }
+
+    /* Show the toggle button prominently */
+    .open-btn {
+        display: block;
+    }
+
+    /* Full-width main content when sidebar is hidden */
+    .main-content.full-width {
+        width: 100%;
+        margin: 0;
+    }
+
+    header {
+        padding: 20px 0; /* Reduce padding for mobile */
+    }
+
+    footer {
+        padding: 15px 0; /* Smaller footer on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em; /* Further reduction on smaller screens */
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .open-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .translation-btn {
+        padding: 8px; /* Smaller buttons for language switch */
+    }
+}
