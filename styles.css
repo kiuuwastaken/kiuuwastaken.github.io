@@ -276,6 +276,9 @@ footer p {
 }
 
 @media (max-width: 480px) {
+    .container{
+        width:90%;
+    }
     h1 {
         font-size: 2em; /* Further reduction on smaller screens */
     }
@@ -283,9 +286,10 @@ footer p {
     h2 {
         font-size: 1.5em;
     }
-
+    #about p{
+        font-size: 0.9em;
     p {
-        font-size: 0.5em;
+        font-size: 0.9em;
     }
 
     .open-btn {
